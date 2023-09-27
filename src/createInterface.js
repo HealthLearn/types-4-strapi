@@ -76,9 +76,9 @@ module.exports = (schemaPath, interfaceName) => {
           type: tsPropertyType,
           path: tsImportPath,
         });
-      tsProperty = `  ${attributeName}: { data: ${tsPropertyType}${
+      tsProperty = `  ${attributeName}: ${tsPropertyType}${
         attributeValue.multiple ? '[]' : ''
-      } };\n`;
+      };\n`;
     }
     // -------------------------------------------------
     // Enumeration
