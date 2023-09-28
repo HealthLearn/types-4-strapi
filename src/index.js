@@ -41,12 +41,15 @@ fs.writeFileSync(`${typesDir}/Payload.ts`, payloadTsInterface);
 const userTsInterface = `export interface User {
   id: number;
   username: string;
+  first: string;
+  last: string;
   email: string;
   provider: string;
   confirmed: boolean;
   blocked: boolean;
   createdAt: Date;
   updatedAt: Date;
+  termsAndConditions: boolean;
 }
 `;
 
