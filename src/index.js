@@ -44,6 +44,7 @@ const userTsInterface = `export interface User {
   first: string;
   last: string;
   email: string;
+  phone: string;
   provider: string;
   confirmed: boolean;
   blocked: boolean;
