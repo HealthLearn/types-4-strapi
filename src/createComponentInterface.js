@@ -37,7 +37,7 @@ module.exports = (schemaPath, interfaceName) => {
         });
       const isArray = attributeValue.relation === 'oneToMany';
       const bracketsIfArray = isArray ? '[]' : '';
-      tsProperty = `  ${attributeName}?: Partial<${tsType}>${bracketsIfArray};\n`;
+      tsProperty = `  ${attributeName}: Partial<${tsType}>${bracketsIfArray};\n`;
     }
     // -------------------------------------------------
     // Component
