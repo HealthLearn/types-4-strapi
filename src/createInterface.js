@@ -8,6 +8,10 @@ module.exports = (schemaPath, interfaceName) => {
   tsInterface += `  id: number;\n`;
   var schemaFile;
   var schema;
+  if (!fs.existsSync(schemaPath)) {
+    return null;
+  }
+
   try {
     schemaFile = fs.readFileSync(schemaPath, 'utf8');
     schema = JSON.parse(schemaFile);
