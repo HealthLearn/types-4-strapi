@@ -165,6 +165,7 @@ module.exports = (schemaPath, interfaceName) => {
   }
   tsInterface += '}\n';
   for (const tsImport of tsImports) {
+    if (tsImport.type === interfaceName) continue; // dont self import
     tsInterface =
       `import { ${tsImport.type} } from '${tsImport.path}';\n` + tsInterface;
   }
