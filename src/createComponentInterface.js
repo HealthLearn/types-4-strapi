@@ -37,7 +37,7 @@ module.exports = (schemaPath, interfaceName) => {
         });
       const isArray = attributeValue.relation === 'oneToMany';
       const bracketsIfArray = isArray ? '[]' : '';
-      tsProperty = `  ${attributeName}: ${tsType}${bracketsIfArray};\n`;
+      tsProperty = `  ${attributeName}: Partial<${tsType}>${bracketsIfArray};\n`;
     }
     // -------------------------------------------------
     // Component
@@ -125,7 +125,7 @@ module.exports = (schemaPath, interfaceName) => {
       attributeValue.type === 'datetime' ||
       attributeValue.type === 'time'
     ) {
-      tsType = 'Date';
+      tsType = 'string';
       tsProperty = `  ${attributeName}: ${tsType};\n`;
     }
     // -------------------------------------------------
