@@ -10,7 +10,7 @@ module.exports.pascalCase = (str) => {
 
 module.exports.isOptional = (attributeValue) => {
   // arrays are never null
-  if (attributeValue.relation === 'oneToMany' || attributeValue.repeatable) {
+  if (attributeValue.relation === 'oneToOne' || attributeValue.relation === 'oneToMany' || attributeValue.repeatable) {
     return false;
   }
   return attributeValue.required !== true;
