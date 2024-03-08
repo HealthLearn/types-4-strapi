@@ -52,6 +52,11 @@ const userTsInterface = `export interface User {
   updatedAt: Date;
   termsAndConditions: boolean;
   authChannel: string;
+  role?: {
+    id: number;
+    name: string;
+    type: string;
+  };
 }
 `;
 
